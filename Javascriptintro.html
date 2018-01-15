@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+
+
+
+
+</head>
+
+
+<body>
+
+
+
+    <form>
+
+        <!--// Collect 2 number values from a user and display the sum of those values on the webpage-->
+        <span>Enter a number:</span>
+        <input type="text" id="input1" />
+        <span>Enter a number:</span>
+        <input type="text" id="input2" />
+        <!--<span>Enter a number:</span>
+        <input type="text" id="input3" />-->
+
+
+    </form>
+
+    <div>
+        <button id="button1">  Calculate </button>
+    </div>
+
+    <div id="result"> RESULT</div>
+
+
+    <!-- span id = demo that allows JS access-->
+
+    <!--
+<span id="demo"></span>
+-->
+    <script>
+        /* declares a variable listening for button 1*/
+        var event1 = document.getElementById('button1');
+
+
+        event1.addEventListener('click', getValue, false);
+
+        function getValue () {
+            /*  alert("event listener is working");*/
+
+            /* two variables that hold the numbers that have been entered by the user*/
+            var userinput1 = document.getElementById('input1').value;
+            var userinput2 = document.getElementById('input2').value;
+           /* var userinput3 = document.getElementById('input3').value;*/
+            
+            
+            var num1 = parseInt(userinput1);
+            var num2 = parseInt(userinput2);
+            /*var num3 = parseInt(userinput3);
+            */
+  /*          var oneMore = num1 + 1;
+            var oneLess = num1 - 1;
+            var oneMessage = "Input +1 = " + oneMore + " <br> Input -1 = " + oneLess;
+            var invalid = "Invalid input";
+            */
+            
+            
+        /*    var calc1 = (num1 + num2)*num3;
+            var calc2 = (num1 + num2 + num3);
+            var total = calc1 - calc2;*/
+            
+           /* var negative = num1 + " is a negative number";
+            var less = num1 + " is less than 10";
+            var more = num1 + " is greater than 10";
+            var equal = num1 + " is equal to 10";
+            */
+            var invalid = "Invalid input";
+            var bothGreater = "Both are greater";
+            var oneGreater = "One value is greater than 10";
+            var equal = "Value equal to 10";
+            var bothLess = "Both are less than 10";
+            
+            
+            if (isNaN(num1) || isNaN(num2)){
+                document.getElementById('result').innerHTML = invalid;
+            }
+            
+            
+             else if(num1 > 10 && num2 > 10) {
+                
+                document.getElementById('result').innerHTML = bothGreater;
+            }
+            
+             else if(num1 > 10 && num2 < 10) {
+                
+                document.getElementById('result').innerHTML = oneGreater;
+            }
+            
+            else if(num1 < 10 && num2 > 10) {
+                
+                document.getElementById('result').innerHTML = oneGreater;
+            }
+            
+            else if(num1 < 10 && num2 < 10) {
+                
+                document.getElementById('result').innerHTML = bothLess;
+                
+            }
+            else if((num1 === 10) || (num2 === 10)) {
+                 document.getElementById('result').innerHTML = equal;
+            }
+        }
+            
+          /*  if (isNaN(num1) || isNaN(num2) || isNaN(num3)){
+            document.getElementById('result').innerHTML = invalid; 
+            }
+            
+            else {
+            document.getElementById('result').innerHTML = total; 
+            }*/
+          /*  
+            if (isNaN(num1)) {
+            
+                document.getElementById('result').innerHTML = invalid;
+                
+                }
+            else{
+                
+                   document.getElementById('result').innerHTML = oneMessage; 
+                }*//*else if (num1 !== num2)
+                {
+                
+                document.getElementById('result').innerHTML = different; 
+                }*/
+            
+            
+           /* document.getElementById('result').innerHTML = total; */
+
+            /*a variable that will hold the total and do the addition*/
+            /*var bigger = if (userinput1>userinput2){
+                        bigger = userinput1;
+            
+            }
+                         else if (userinput2<userinput1){
+                        bigger = userinput2;
+            document.getElementById('result').innerHTML = getBigger;
+                         }
+                         else (userinput1 = userinput2){
+                         bigger = "equal";
+            document.getElementById('result').innerHTML = getBigger;
+                         }*/
+            /*        console.log(total);
+             */
+            /*   return total;
+             */
+        
+
+        /*
+        document.getElementById("demo").innerHTML = "hello world";
+        console.log(demo);
+        */
+        /*
+            
+            var myAddress = {
+                
+                Street: 'minories',
+                Number: 104,
+                building: {
+                floor: 4,
+                security: 'fob'
+            }
+                
+            };
+            
+            console.log(myAddress);
+        */
+
+    </script>
+
+
+
+
+
+</body>
+
+
+
+</html>
